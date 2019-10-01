@@ -1,5 +1,4 @@
 const objectId = require("mongodb").ObjectID;
-const path = require("path");
 let db, col;
 (async () => {
     try {

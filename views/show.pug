@@ -8,8 +8,11 @@ block main
             h1=data.author
             p.quote= data.quote
             a(href="/quotes/") Return
+                i.fas.fa-undo
             a(href="/quotes/edit/" + data._id) Update
+                i.far.fa-edit
             a(href="/quotes/delete/" + data._id) Delete
+                i.far.fa-trash-alt
             p.extra="ID: " + data._id
             p.extra="Timestamp: " + data.timestamp
             hr

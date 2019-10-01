@@ -2,14 +2,18 @@ extends head.pug
 block header
     form(action="/quotes/create")
         input(type="submit" value="Create new" class="create")
+            
 block main
     ul
         each data in val
             h1=data.author
             p.quote=data.quote
-            a(href="/quotes/" + data._id) Select
+            a(href="/quotes/") Select
+                i.fas.fa-search
             a(href="/quotes/edit/" + data._id) Update
+                i.far.fa-edit
             a(href="/quotes/delete/" + data._id) Delete
+                i.far.fa-trash-alt
             p.extra="ID: " + data._id
             p.extra="Timestamp: " + data.timestamp
             hr

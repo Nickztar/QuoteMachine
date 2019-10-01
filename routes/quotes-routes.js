@@ -1,6 +1,7 @@
 const quotes = require("../controllers/quotes-controller");
 
 module.exports = (app) => {
+    app.get('/', quotes.home);
     app.get('/quotes', quotes.index);
     app.get('/quotes/delete/:id', quotes.destroy);
     app.get('/quotes/create', quotes.create);

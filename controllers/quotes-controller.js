@@ -12,6 +12,9 @@ let db, col;
 })();
 
 module.exports = {
+    home: (req, res) =>{
+        res.redirect("/quotes");
+    },
     index: async (req, res) => {
         try {
             const data = await col.find().toArray();

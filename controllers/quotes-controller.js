@@ -1,5 +1,19 @@
 const objectId = require("mongodb").ObjectID;
 let db, col;
+class Quote {
+    constructor(author, quote) {
+        this.author = author;
+        this.checkAuthor();
+        this.quote = quote;
+        this.timestamp = Date.now()
+    }
+
+    checkAuthor() {
+        if (this.author.length < 2) {
+            this.author = this.author + " - extra chars";
+        }
+    }
+}
 (async () => {
     try {
         db = await require("../dbConfig")();
@@ -11,7 +25,7 @@ let db, col;
 })();
 
 module.exports = {
-    home: (req, res) =>{
+    home: (req, res) => {
         res.redirect("/quotes");
     },
     index: async (req, res) => {
@@ -53,15 +67,15 @@ module.exports = {
         }
     },
     create: async (req, res) => {
-        res.render('create', {date: Date.now(), title:"Create new quote"});
+        res.render('create', {
+            date: Date.now(),
+            title: "Create new quote"
+        });
     },
     store: async (req, res) => {
         try {
-            const obj = {
-                ...req.body,
-                timestamp: Date.now()
-            }
-            await col.insertOne(obj);
+            const quote = new Quote(req.body.author, req.body.quote);
+            await col.insertOne(quote);
             res.redirect('/quotes');
         } catch (err) {
             res.send("No quotes created");

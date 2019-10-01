@@ -43,6 +43,7 @@ header {
 }
 
 .create {
+    cursor: pointer;
     box-shadow: 0 10px 15px #555555;
     text-align: center;
     border: none;
@@ -80,6 +81,7 @@ header {
 }
 
 .submit {
+    cursor: pointer;
     margin-top: 1%;
     color: #FBFCFC;
     background: #ffd89b;
@@ -110,7 +112,7 @@ header {
 }
 
 main {
-    width: 60vw;
+    width: 75vw;
     margin: 0 auto;
     display: flex;
     justify-content: center;

@@ -125,6 +125,7 @@ ul {
 }
 
 h1 {
+    word-wrap: break-word;
     font-family: 'Ubuntu', sans-serif;
     font-size: 5rem;
     color: rgb(22, 21, 21);

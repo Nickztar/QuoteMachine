@@ -8,7 +8,7 @@ block main
         each data in val
             h1=data.author
             p.quote=data.quote
-            a(href="/quotes/") Select
+            a(href="/quotes/"+data._id) Select
                 i.fas.fa-search
             a(href="/quotes/edit/" + data._id) Update
                 i.far.fa-edit

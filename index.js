@@ -1,0 +1,17 @@
+const express = require("express"); //Express import
+const app = express(); //Express init
+
+app.use(express.urlencoded({
+    extended: false
+})); //HTML encode
+app.use(express.static(__dirname + "/public"));
+
+require("./routes/quotes-routes")(app); //Routes init
+
+//Views engine initialization
+app.set("views", "./views");
+app.set("view engine", "pug");
+
+app.listen(3000, function () {
+    console.log("port 3000")
+}); //Port setup

@@ -1,0 +1,7 @@
+extends head.pug
+block main
+    form(action="/quotes/update" method="POST")
+        input.make(type="text" name="author" value = author placeholder = "Author")
+        input.make(type="text" name="quote" value = quote placeholder = "Quotes")
+        input(type="hidden" name="id" value = _id)
+        input.submit(type="submit" value="Update")

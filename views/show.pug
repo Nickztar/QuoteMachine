@@ -1,0 +1,15 @@
+extends head.pug
+block header
+    form(action="/quotes/create")
+        input(type="submit" value="Create new" class="create")
+block main
+    ul
+        each data in val
+            h1=data.author
+            p.quote= data.quote
+            a(href="/quotes/") Return
+            a(href="/quotes/edit/" + data._id) Update
+            a(href="/quotes/delete/" + data._id) Delete
+            p.extra="ID: " + data._id
+            p.extra="Timestamp: " + data.timestamp
+            hr

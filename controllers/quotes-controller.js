@@ -43,11 +43,12 @@ module.exports = {
     },
     show: async (req, res) => {
         try {
-            let data = await col.findOne({
-                "_id": objectId(req.params.id)
-            });
+            const arrD = await col.find({
+                author: {$regex: req.params.author, $options: 'i'}
+            }).toArray(); 
+            const data = arrD.reverse();
             res.render('show', {
-                val: [data],
+                val: data,
                 title: "Specified quote"
             });
 

@@ -114,12 +114,23 @@ header {
     font-size: 150%;
 }
 
+div {
+    background: #cb2d3e;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ef473a, #cb2d3e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 20px;
+    margin: 3vh 5vw;
+    box-shadow: 0 1vh 15px rgb(54, 51, 51);
+}
+
 main {
-    width: 75vw;
+    width: 65vw;
     margin: 0 auto;
     display: flex;
     justify-content: center;
-
 }
 
 ul {
@@ -128,14 +139,12 @@ ul {
 }
 
 h1 {
-    word-wrap: break-word;
     font-family: 'Ubuntu', sans-serif;
     font-size: 5rem;
     color: rgb(22, 21, 21);
     text-transform: capitalize;
-    padding: 1vh;
+    padding: 1vh 2vh;
     transition: 0.5s ease;
-
 }
 
 .quote {
@@ -143,8 +152,10 @@ h1 {
     font-family: 'Yellowtail', cursive;
     font-size: 2rem;
     color: rgb(54, 51, 51);
-    padding-bottom: 5vh;
+    padding: 0 3vh 5vh 3vh;
+    margin: 0vh 3vh
 }
+
 a {
     font-size: 3vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

@@ -51,7 +51,7 @@ header {
     border: none;
     min-height: 8vh;
     min-width: 15vw;
-    margin: 2vh 0;
+    margin: 2vh 2vh;
     font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
 }
@@ -138,6 +138,7 @@ ul {
 }
 
 h1 {
+    word-wrap: break-word;
     font-family: 'Ubuntu', sans-serif;
     font-size: 5rem;
     color: rgb(22, 21, 21);

@@ -5,7 +5,7 @@ class Quote {
         this.author = author;
         this.checkAuthor();
         this.quote = quote;
-        this.timestamp = new Date().toLocaleString();
+        this.timestamp = new Date().toLocaleString("de-DE", {timeZone:'Europe/Berlin'});
     }
 
     checkAuthor() {
@@ -71,7 +71,7 @@ module.exports = {
     },
     create: async (req, res) => {
         res.render('create', {
-            date: new Date(),
+            date: new Date().toLocaleString("de-DE", {timeZone: 'Europe/Berlin'}),
             title: "Create new quote"
         });
     },
@@ -105,7 +105,7 @@ module.exports = {
             const dataBody = {
                 author: req.body.author,
                 quote: req.body.quote,
-                timestamp: new Date().toLocaleString()
+                timestamp: new Date().toLocaleString("de-DE", {timeZone: 'Europe/Berlin'})
             }
             await col.updateOne({
                 "_id": objectId(req.body.id)

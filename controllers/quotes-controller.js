@@ -5,7 +5,7 @@ class Quote {
         this.author = author;
         this.checkAuthor();
         this.quote = quote;
-        this.timestamp = Date.now()
+        this.timestamp = new Date().toLocaleString();
     }
 
     checkAuthor() {
@@ -69,7 +69,7 @@ module.exports = {
     },
     create: async (req, res) => {
         res.render('create', {
-            date: Date.now(),
+            date: new Date(),
             title: "Create new quote"
         });
     },
@@ -103,7 +103,7 @@ module.exports = {
             const dataBody = {
                 author: req.body.author,
                 quote: req.body.quote,
-                timestamp: Date.now()
+                timestamp: new Date().toLocaleString()
             }
             await col.updateOne({
                 "_id": objectId(req.body.id)

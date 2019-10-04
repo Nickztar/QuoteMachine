@@ -9,7 +9,7 @@ class Quote {
     }
 
     checkAuthor() {
-        if (this.author.length < 2) {
+        if (this.author.length < 4) {
             this.author = this.author + " - extra chars";
         }
     }
@@ -43,8 +43,10 @@ module.exports = {
     },
     show: async (req, res) => {
         try {
+            const author = req.params.author;
+            const subStr = author.substr(0, 3);
             const arrD = await col.find({
-                author: {$regex: req.params.author, $options: 'i'}
+                author: {$regex: subStr, $options: 'i'}
             }).toArray(); 
             const data = arrD.reverse();
             res.render('show', {

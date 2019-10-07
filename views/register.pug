@@ -1,0 +1,9 @@
+extends head.pug
+block main
+     form(action="/register" method="POST")
+        input.lCreate(type="email" name="email" placeholder="Enter a valid email" required)
+        br
+        input.lCreate(type="password" name="password" placeholder="Enter a password")
+        input(input type="hidden" name="date" value=date)
+        br
+        input.submit(type="submit" value="Register")

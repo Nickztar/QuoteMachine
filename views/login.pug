@@ -1,0 +1,8 @@
+extends head.pug
+block main
+     form(action="/login" method="POST")
+        input.lCreate(type="email" name="email" placeholder="Enter your email" required)
+        br
+        input.lCreate(type="password" name="password" placeholder="Enter your password")
+        br
+        input.submit(type="submit" value="Login")

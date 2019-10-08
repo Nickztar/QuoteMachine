@@ -31,7 +31,7 @@ module.exports = {
             const exist = await col.findOne({email:user.email});
             if (!exist) {
                 await col.insertOne(user);
-                res.redirect('/quotes');
+                res.redirect('/login');
             } else {
                 res.redirect('/register?useralreadyexists');
             }

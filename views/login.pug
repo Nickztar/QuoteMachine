@@ -1,8 +1,10 @@
 extends head.pug
 block main
-     form(action="/login" method="POST")
-        input.lCreate(type="email" name="email" placeholder="Enter your email" required)
-        br
-        input.lCreate(type="password" name="password" placeholder="Enter your password")
-        br
-        input.submit(type="submit" value="Login")
+   div.loginPart
+      h2.in Sign in to your account
+      form(action="/login" method="POST")
+         input.lCreate(type="email" name="email" placeholder="Enter your email" required)
+         input.lCreate(type="password" name="password" placeholder="Enter your password")
+         input.lsubmit(type="submit" value="Sign in")
+         p Don't have an account?
+            a.loginLink(href="/register") Get started!

@@ -28,8 +28,13 @@ module.exports = {
                 password: hashPass,
                 date: req.body.date
             };
-            await col.insertOne(user);
-            res.redirect('/quotes');
+            const exist = await col.findOne({email:user.email});
+            if (!exist) {
+                await col.insertOne(user);
+                res.redirect('/quotes');
+            } else {
+                res.redirect('/register?useralreadyexists');
+            }
         } catch (error) {
             res.redirect('/register?errormakinguser');
         }

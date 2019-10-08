@@ -1,4 +1,5 @@
 //Mongo config
+require("dotenv").config();
 const conString = process.env.DBSTRING;
 const mongo = require("mongodb").MongoClient;
 

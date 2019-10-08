@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Yellowtail&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -120,7 +121,8 @@ div {
     margin: 3vh 5vw;
     box-shadow: 0 0.5vh 10px rgb(54, 51, 51);
 }
-.loginPart{
+
+.loginPart {
     font-family: 'Roboto Mono', monospace;
     margin: 12.5vh 27.5vw;
     display: grid;
@@ -129,20 +131,25 @@ div {
     border-radius: 10px;
     background: #fff;
 }
-.in{
+
+.in {
     margin: 5vh 0 7vh 0;
     text-align: center;
 }
-.loginLink, p{
+
+.loginLink,
+p {
     padding-right: 5px;
     text-align: center;
     text-decoration: none;
 }
-.loginLink{
+
+.loginLink {
     padding-left: 5px;
     color: #D76D77;
 }
-.lCreate{
+
+.lCreate {
     background: rgba(199, 194, 194, 0.568);
     color: #706e6e;
     border: none;
@@ -151,7 +158,9 @@ div {
     height: 7vh;
     margin: 0 5vw 2vh 5vw;
 }
-.lsubmit{
+
+.lsubmit {
+    cursor: pointer;
     background: #b1515c;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #F8939D, #D76D77, #b1515c);
@@ -165,6 +174,10 @@ div {
     border: none;
     border-radius: 5px;
     font-size: 1.7rem;
+}
+
+.lsubmit:hover {
+    box-shadow: 1vh 1vh 15px #F8939D;
 }
 
 main {

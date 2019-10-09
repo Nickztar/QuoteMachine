@@ -84,7 +84,6 @@ header a {
 header a:hover {
     border: 4px inset rgba(65, 161, 225, 0.842);
     box-shadow: 0 5px 15px rgba(41, 93, 128, 0.842);
-    font-size: 1.1rem;
     color: rgba(249, 253, 2, 0.863);
     text-decoration: underline;
 }

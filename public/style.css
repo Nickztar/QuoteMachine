@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Yellowtail&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
 
 * {
     padding: 0;
@@ -37,31 +38,92 @@ input {
 }
 
 header {
+    display: grid;
+    grid-template-columns: 10vw auto auto 10vw 15vw;
+    grid-template-areas: 'logo h1 new link1 link2';
+    height: 15vh;
+}
+
+header img {
+    width: 8vw;
+    height: 6vw;
+    align-self: center;
+    justify-self: right;
+}
+
+header h1 {
+    font-family: 'Mansalva', cursive;
+    align-self: center;
+    color: rgba(246, 250, 11, 0.863);
+    justify-self: left;
+    font-size: 2.5rem;
+    grid-area: h1;
+}
+
+header a {
+    justify-self: left;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgba(246, 250, 11, 0.863);
+    background: #cb2d3e;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ef473a, #cb2d3e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    align-self: center;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    width: 10vw;
+    height: 50%;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(61, 143, 197, 0.842);
+    border: 4px solid rgba(65, 161, 225, 0.842);
+}
+
+header a:hover {
+    border: 4px inset rgba(65, 161, 225, 0.842);
+    box-shadow: 0 5px 15px rgba(41, 93, 128, 0.842);
+    font-size: 1.1rem;
+    color: rgba(249, 253, 2, 0.863);
+    text-decoration: underline;
+}
+
+header #login {
+    padding: 8% 0;
+    margin-right: 4%;
+    grid-area: link1;
+}
+
+header #register {
+    padding: 5% 0;
+    margin-left: 4%;
+    grid-area: link2;
+}
+
+header form {
+    grid-area: new;
     display: flex;
-    justify-content: center;
-    align-content: center;
+    align-items: center;
+    justify-items: right;
 }
 
 .create {
+    margin: 0 0 0 auto;
+    color: rgba(246, 250, 11, 0.863);
+    background: none;
     cursor: pointer;
-    box-shadow: 0 10px 15px #555555;
-    text-align: center;
+    width: 18vw;
+    height: 50%;
+    border-radius: 5px;
+    padding: 2%;
     border: none;
-    min-height: 8vh;
-    min-width: 15vw;
-    margin: 2vh 0vh;
     font-family: 'Ubuntu', sans-serif;
-    text-transform: uppercase;
 }
 
 .create:hover {
-    background: #3a6186;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #89253e, #3a6186);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #89253e, #3a6186);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    box-shadow: 0 0.5vh 15px rgb(221, 31, 31);
+    font-size: 1.9rem;
+    text-decoration: underline;
 }
 
 .make {
@@ -192,7 +254,7 @@ ul {
     text-align: center;
 }
 
-h1 {
+main h1 {
     word-wrap: break-word;
     font-family: 'Ubuntu', sans-serif;
     font-size: 5rem;

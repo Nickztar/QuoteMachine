@@ -1,8 +1,11 @@
 extends head.pug
 block header
+    img(src="/favicon.png" alt="Feather logo")
+    h1 "Quotes"
     form(action="/quotes/create")
         input(type="submit" value="Create new" class="create")
-
+    a#login(href="/login") Login
+    a#register(href="/register") Register
 block main
     ul
         each data in val

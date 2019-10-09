@@ -186,7 +186,7 @@ div {
 
 .loginPart {
     font-family: 'Roboto Mono', monospace;
-    margin: 12.5vh 27.5vw;
+    margin: 0 27.5vw 10vh 27.5vw; 
     display: grid;
     min-width: 35vw;
     height: 75vh;

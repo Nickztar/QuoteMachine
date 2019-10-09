@@ -74,7 +74,7 @@ app.get('/quotes/update/:id/:q', async(req,res)=>{
                         <input type = "hidden" name = "id" value = "${data._id}">
                         <input type="submit" value="Update">
                     </form>
-                </main>
+                </main>s
             </body>
             </html>
             `;

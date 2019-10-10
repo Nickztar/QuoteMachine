@@ -5,7 +5,7 @@ class Quote {
         this.author = author;
         this.checkAuthor();
         this.quote = quote;
-        this.timestamp = new Date().toLocaleString("de-DE", {timeZone:'Europe/Berlin'});
+        this.timestamp = new Date().toLocaleString("de-DE", {timeZone:'Europe/Berlin', hour12: false});
     }
 
     checkAuthor() {
@@ -71,7 +71,7 @@ module.exports = {
     },
     create: async (req, res) => {
         res.render('create', {
-            date: new Date().toLocaleString("de-DE", {timeZone: 'Europe/Berlin'}),
+            date: new Date().toLocaleString("de-DE", {timeZone: 'Europe/Berlin', hour12: false}),
             title: "Create new quote"
         });
     },

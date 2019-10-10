@@ -105,7 +105,7 @@ module.exports = {
             const dataBody = {
                 author: req.body.author,
                 quote: req.body.quote,
-                timestamp: new Date().toLocaleString("de-DE", {timeZone: 'Europe/Berlin'})
+                timestamp: new Date().toLocaleString("de-DE", {timeZone: 'Europe/Berlin', hour12: false})
             }
             await col.updateOne({
                 "_id": objectId(req.body.id)

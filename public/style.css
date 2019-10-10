@@ -66,7 +66,7 @@ header a {
     align-self: center;
     background: none;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.9vw;
     width: 10vw;
     height: 45%;
     display: flex;
@@ -78,7 +78,7 @@ header a {
 
 header a:hover {
     color: #eee;
-    font-size: 1.1rem;
+    font-size: 2vw;
     background: rgba(199, 194, 194, 0.192);
 }
 
@@ -160,7 +160,7 @@ header form {
     box-shadow: 0 0.5vh 15px rgb(221, 31, 31);
     font-size: 150%;
 }
-    
+
 .loginPart {
     font-family: 'Roboto Mono', monospace;
     margin: 0 27.5vw 10vh 27.5vw;
@@ -176,7 +176,8 @@ header form {
     text-align: center;
 }
 
-.loginLink, p {
+.loginLink,
+p {
     padding-right: 5px;
     text-align: center;
     text-decoration: none;
@@ -237,7 +238,7 @@ ul {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #fff, #eee);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-radius: 5px;
+    border-radius: 10px;
     width: 30vw;
     height: 75vh;
     box-shadow: 0 0.5vh 10px rgb(54, 51, 51);
@@ -261,7 +262,8 @@ main h1 {
     padding: 0 3vh 5vh 3vh;
     margin: 0vh 3vh
 }
-.quote::first-letter{
+
+.quote::first-letter {
     text-transform: capitalize;
     font-size: 5.5vh;
 }
@@ -306,16 +308,37 @@ ul a:hover {
 }
 
 .maindiv::-webkit-scrollbar-track {
-    border-radius: 10px;
     background: none;
 }
 
 .maindiv::-webkit-scrollbar {
-    width: 12px;
+    width: 14px;
     background: none;
 }
 
 .maindiv::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: rgba(112, 109, 109, 0.671);
+}
+
+#topBtn {
+    display: none;
+}
+
+#topBtn.shown {
+    position: fixed;
+    bottom: 20px;
+    right: 43vw;
+    z-index: 99;
+    font-size: 7vh;
+    border: none;
+    outline: none;
+    background: none;
+    color: rgba(54, 51, 51, 0.842);
+    cursor: pointer;
+    border-radius: 10px;
+    width: 10vw;
+    height: 10vh;
+    position: fixed;
+    display: block;
 }

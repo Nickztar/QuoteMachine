@@ -9,7 +9,7 @@ block header
 block main
     ul
         each data in val
-            div
+            div.maindiv
                 h1=data.author
                 p.quote=data.quote
                 a(href="/quotes/"+data.author) Search
@@ -20,5 +20,4 @@ block main
                     i.far.fa-trash-alt
                 p.extra="ID: " + data._id
                 p.extra="Time: " + data.timestamp
-                hr
 

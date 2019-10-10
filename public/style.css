@@ -160,7 +160,7 @@ header form {
     box-shadow: 0 0.5vh 15px rgb(221, 31, 31);
     font-size: 150%;
 }
-
+    
 .loginPart {
     font-family: 'Roboto Mono', monospace;
     margin: 0 27.5vw 10vh 27.5vw;
@@ -176,8 +176,7 @@ header form {
     text-align: center;
 }
 
-.loginLink,
-p {
+.loginLink, p {
     padding-right: 5px;
     text-align: center;
     text-decoration: none;
@@ -256,12 +255,15 @@ main h1 {
 }
 
 .quote {
-    text-transform: capitalize;
     font-family: 'Yellowtail', cursive;
     font-size: 5vh;
     color: rgb(54, 51, 51);
     padding: 0 3vh 5vh 3vh;
     margin: 0vh 3vh
+}
+.quote::first-letter{
+    text-transform: capitalize;
+    font-size: 5.5vh;
 }
 
 ul a {

@@ -26,12 +26,6 @@ input {
     width: 100%;
     padding: 2%;
     font-size: 1.3rem;
-    background: #200122;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6f0000, #200122);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6f0000, #200122);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 25px;
     color: #FBFCFC;
 }
@@ -263,10 +257,11 @@ main h1 {
 }
 
 .quote {
+    min-height: 50%;
     font-family: 'Yellowtail', cursive;
     font-size: 2vw;
     color: rgb(54, 51, 51);
-    padding: 0 3vh 5vh 3vh;
+    padding: 3vh 3vh 5vh 3vh;
     margin: 0vh 3vh
 }
 
@@ -275,38 +270,15 @@ main h1 {
     font-size: 2.6vw;
 }
 
-ul a {
-    font-size: 3vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    justify-content: space-around;
+.maindiv a {
+    position: fixed;
+    margin: 0 5vw;
     width: 18vw;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 0.5vh 15px rgb(29, 48, 48);
-    align-items: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    background: #200122;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6f0000, #200122);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6f0000, #200122);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    margin: auto;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    color: #FBFCFC;
+    color: #000000;
 }
 
 ul a:hover {
-    background: #3a6186;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #89253e, #3a6186);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #89253e, #3a6186);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    box-shadow: 0 0.5vh 15px rgb(221, 31, 31);
+    width: 10vw;
 }
 
 .extra {

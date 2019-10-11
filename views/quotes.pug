@@ -12,11 +12,9 @@ block main
             div.maindiv
                 h1=data.author
                 p.quote=data.quote
-                a(href="/quotes/"+data.author) Search
-                    i.fas.fa-search
-                a(href="/quotes/edit/" + data._id) Update
+                a(href="/quotes/edit/" + data._id)
                     i.far.fa-edit
-                a(href="/quotes/delete/" + data._id) Delete
+                a(href="/quotes/delete/" + data._id)
                     i.far.fa-trash-alt
                 p.extra="ID: " + data._id
                 p.extra="Time: " + data.timestamp

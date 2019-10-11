@@ -5,12 +5,14 @@ window.onscroll = ()=>{
 };
 
 function scroll(){
-    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30){
-        button.classList.add("shown");
-    }
-    else{
-        button.classList.remove("shown");
-    }
+    if(button){
+        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
+            button.classList.add("shown");
+        }
+        else{
+            button.classList.remove("shown");
+        }
+    } 
 }
 
 function topFunction() {

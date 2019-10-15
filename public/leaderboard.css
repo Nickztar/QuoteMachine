@@ -77,6 +77,9 @@ body {
 		font-size: 10vw;
 		margin: 2vw;
 	}
+	.pos{
+		font-size: 5vw;
+	}
 	.leaderboard {
 		width: 80vw;
 	}

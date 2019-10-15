@@ -13,8 +13,7 @@ module.exports = {
             const val = await col.find().sort({score: -1}).toArray();
             res.render('leaderboard', {
                 val: val,
-                title: "Leaderboard för robocop",
-                leader: val[0].name
+                title: "Leaderboard för robocop"
             });
         } catch (error) {
             res.send("Error finding qoutes")

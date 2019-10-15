@@ -10,7 +10,7 @@ let db, col;
 module.exports = {
     index: async (req, res) => {
         try {
-            const val = await col.find().toArray();
+            const val = await col.find().sort({score: -1}).toArray();
             res.render('leaderboard', {
                 val: val,
                 title: "Leaderboard för robocop",

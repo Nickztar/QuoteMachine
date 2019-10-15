@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet" href= '/leaderboard.css')
+        script(src="https://kit.fontawesome.com/4fbe26280f.js" crossorigin="anonymous")
+        title=title
+    body
+        main.center
+            div.leader
+                h1#leader="🔥:  " + leader
+            ul.leaderboard
+                -let index = 1
+                each data in val
+                    div.item
+                        h3.pos=index++
+                        h3.boardname=data.name
+                        p.score=data.score
+

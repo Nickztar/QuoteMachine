@@ -32,8 +32,8 @@ input {
 
 header {
     display: grid;
-    grid-template-columns: 10vw auto auto 10vw 12.5vw;
-    grid-template-areas: 'logo h1 new link1 link2';
+    grid-template-columns: 10vw auto auto auto 10vw 12.5vw;
+    grid-template-areas: 'logo h1 search new link1 link2';
     height: 15vh;
 }
 
@@ -86,13 +86,15 @@ header #register {
     grid-area: link2;
 }
 
-header form {
+header .cNew {
     grid-area: new;
     display: flex;
     align-items: center;
     justify-items: right;
 }
-
+header .search{
+    width: 10vw;
+}
 .create {
     margin: 0 0 0 auto;
     color: rgba(246, 250, 11, 0.863);
@@ -271,7 +273,7 @@ main h1 {
 }
 
 .maindiv a {
-    position: fixed;
+    position: relative;
     margin: 0 5vw;
     width: 18vw;
     color: #000000;

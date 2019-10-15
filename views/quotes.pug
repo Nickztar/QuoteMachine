@@ -2,8 +2,11 @@ extends head.pug
 block header
     img(src="/favicon.png" alt="Feather logo")
     h1 "Quotes"
-    form(action="/quotes/create")
-        input(type="submit" value="Create new" class="create")
+    form.search(action="")
+        input#search(type="search" placeholder="Search" autofocus required)
+        i.fas.fa-search
+    form.cNew(action="/quotes/create")
+        input#cNew(type="submit" value="Create new" class="create")
     a#login(href="/login") Login
     a#register(href="/register") Register
 block main

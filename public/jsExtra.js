@@ -6,7 +6,7 @@ window.onscroll = ()=>{
 
 function scroll(){
     if(button){
-        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
             button.classList.add("shown");
         }
         else{

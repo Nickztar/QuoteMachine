@@ -11,6 +11,7 @@ app.use(express.static(__dirname + "/public"));
 
 require("./routes/quotes-routes")(app); //Routes init
 require("./routes/login-routes")(app);
+require("./routes/leaderboard-routes")(app);
 //Views engine initialization
 app.set("views", "./views");
 app.set("view engine", "pug");

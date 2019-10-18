@@ -16,12 +16,16 @@ block main
             div.maindiv
                 h1=data.author
                 p.quote=data.quote
-                a(href="/quotes/edit/" + data._id)
-                    i.far.fa-edit
-                a(href="/quotes/delete/" + data._id)
-                    i.far.fa-trash-alt
-                p.extra="ID: " + data._id
-                p.extra="Time: " + data.timestamp
+                div#changeIcons
+                    a(href="/quotes/edit/" + data._id)
+                        i.far.fa-edit
+                    a(href="/quotes/delete/" + data._id)
+                        i.far.fa-trash-alt
+                div.tooltip
+                    i.far.fa-question-circle
+                    div.textra
+                        span.extra="ID: " + data._id
+                        span.extra="Time: " + data.timestamp
 block scroll
     button#topBtn(onclick="topFunction()" title="Go to the top")
         i.fas.fa-level-up-alt

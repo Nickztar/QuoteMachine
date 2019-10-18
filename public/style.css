@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
@@ -148,6 +148,7 @@ header .search:hover #search {
 }
 
 header .search:hover .fas {
+    cursor: pointer;
     background: #07051a;
     color: #fff;
 }
@@ -303,21 +304,25 @@ ul {
     height: 75vh;
     box-shadow: 0 0.5vh 10px rgb(54, 51, 51);
     overflow-y: auto;
+    position: relative;
 }
 
 main h1 {
     word-wrap: break-word;
     font-family: 'Ubuntu', sans-serif;
     font-size: 4vw;
+    width: 82%;
+    height: 25%;
+    margin: auto;
     color: rgb(22, 21, 21);
     text-transform: capitalize;
-    padding: 1vh 2vh;
+    padding: 1vh 2vh 0 2vh;
     transition: 0.5s ease;
 }
 
 .quote {
-    min-height: 50%;
-    font-family: 'Yellowtail', cursive;
+    height: 55%;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 2vw;
     color: rgb(54, 51, 51);
     padding: 3vh 3vh 5vh 3vh;
@@ -329,20 +334,60 @@ main h1 {
     font-size: 2.6vw;
 }
 
-.maindiv a {
-    position: relative;
-    margin: 0 5vw;
-    width: 18vw;
-    color: #000000;
+.maindiv #changeIcons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 1%;
+    right: 1%;
 }
 
-ul a:hover {
-    width: 10vw;
+#changeIcons a {
+    margin: .5vh;
+    text-decoration: none;
+    color: #000000;
+    font-size: 2vw;
+}
+
+#changeIcons a:hover {
+    transform: scale(1.05);
+}
+
+.fa-trash-alt {
+    margin-right: .9vh;
+}
+
+.tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tooltip .fa-question-circle {
+    font-size: 2vw;
+}
+
+.textra {
+    position: relative;
+    padding: 5px;
+    background: rgba(8, 8, 8, 0.678);
+    width: 20vw;
+    display: none;
+    border-radius: 20px;
+    flex-direction: column;
+    margin-top: 1vh;
+    transition: all 2s;
+
 }
 
 .extra {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eee;
     font-size: 1vw;
+}
+
+.tooltip:hover .textra {
+    display: flex;
 }
 
 body::-webkit-scrollbar {

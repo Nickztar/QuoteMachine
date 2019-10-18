@@ -83,4 +83,18 @@ app.get('/quotes/update/:id/:q', async(req,res)=>{
                 ...req.body,
                 timestamp: Date.now()
             }; */
-/*  */
+
+            /* .maindiv::-webkit-scrollbar-track {
+                display: none;
+            }
+            
+            .maindiv::-webkit-scrollbar {
+                width: 14px;
+                background: none;
+            }
+            
+            .maindiv::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background-color: var(--light-dark-shadow);
+            }
+         */    

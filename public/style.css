@@ -3,6 +3,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
 
+:root {
+    --strong-white: #fff;
+    --less-white: #eee;
+    --strong-black: #000;
+    --medium-black: #161515;
+    --less-black: #363636;
+    --strong-shadow: #2e2c2ca2;
+    --light-dark-shadow: #565252a2;
+    --super-light-shadow: #b8b2b26b;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -14,11 +25,11 @@
 }
 
 body {
-    background: #000000;
+    background: var(--strong-black);
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #434343, #000000);
+    background: -webkit-linear-gradient(to left, var(--less-black), var(--strong-black));
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #434343, #000000);
+    background: linear-gradient(to left, var(--less-black), var(--strong-black));
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -27,7 +38,7 @@ input {
     padding: 2%;
     font-size: 1.3rem;
     border-radius: 25px;
-    color: #FBFCFC;
+    color: var(--less-white);
 }
 
 header {
@@ -47,7 +58,7 @@ header img {
 header h1 {
     font-family: 'Mansalva', cursive;
     align-self: center;
-    color: #fff;
+    color: var(--strong-white);
     justify-self: left;
     font-size: 2.5rem;
     grid-area: h1;
@@ -56,7 +67,7 @@ header h1 {
 header a {
     justify-self: left;
     font-family: 'Ubuntu', sans-serif;
-    color: #fff;
+    color: var(--strong-white);
     align-self: center;
     background: none;
     text-decoration: none;
@@ -66,15 +77,15 @@ header a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 15px rgba(87, 83, 83, 0.678);
+    box-shadow: 0 10px 15px var(--light-dark-shadow);
     border-radius: 5px;
     transition: all 0.4s;
 }
 
 header a:hover {
-    color: #eee;
+    color: var(--strong-white);
     transform: scale(1.05);
-    background: rgba(184, 178, 178, 0.192);
+    background: var(--super-light-shadow);
 }
 
 header #login {
@@ -87,11 +98,12 @@ header #register {
     grid-area: link2;
 }
 
-header .return{
+header .return {
     grid-area: new;
     box-shadow: none;
 }
-header .return:hover{
+
+header .return:hover {
     background: none;
 }
 
@@ -102,12 +114,12 @@ header .search {
     left: 25%;
     transform: translate(-50%, -50%);
     transition: all 0.4s;
-    background: #fff;
+    background: var(--strong-white);
     padding: 5px;
     width: 3.5vw;
     height: 3.5vw;
     border-radius: 1.75vw;
-    border: 4px solid #fff;
+    border: 4px solid var(--strong-white);
 }
 
 header #search {
@@ -122,7 +134,7 @@ header #search {
     line-height: 80%;
     border-radius: 20%;
     outline: none;
-    color: rgb(22, 21, 21);
+    color: var(--medium-black);
     border: none;
     padding: 0.7vw 1vw 0 1vw;
 }
@@ -135,7 +147,7 @@ header .search .fas {
     width: 2.975vw;
     height: 2.975vw;
     border-radius: 50%;
-    color: #07051a;
+    color: var(--medium-black);
     text-align: center;
     font-size: 4vh;
     transition: all 0.4s;
@@ -152,18 +164,20 @@ header .search:hover #search {
 
 header .search:hover .fas {
     cursor: pointer;
-    background: #07051a;
-    color: #fff;
+    background: var(--medium-black);
+    color: var(--strong-white);
 }
+
 header .cNew {
     display: flex;
     align-items: center;
     justify-content: right;
 }
+
 .create {
-    box-shadow: 0 10px 15px rgba(87, 83, 83, 0.678);
+    box-shadow: 0 10px 15px var(--light-dark-shadow);
     justify-self: right;
-    color: #eee;
+    color: var(--strong-white);
     background: none;
     cursor: pointer;
     width: 13vw;
@@ -176,12 +190,12 @@ header .cNew {
 }
 
 .create:hover {
-    background: rgba(184, 178, 178, 0.192);
+    background: var(--super-light-shadow);
     transform: scale(1.1);
     text-decoration: underline;
 }
 
-.make {
+.make { /* Too be fixed */
     width: 80vw;
     height: 15vh;
     background: #A1FFCE;
@@ -191,12 +205,12 @@ header .cNew {
     background: linear-gradient(to right, #FAFFD1, #A1FFCE);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-size: 4vh;
-    border: 2px solid black;
+    border: 2px solid var(--strong-black);
     margin-top: 1%;
-    color: rgb(22, 21, 21);
+    color: var(--medium-black);
 }
 
-.submit {
+.submit { /* Too be fixed */
     cursor: pointer;
     margin-top: 1%;
     color: #FBFCFC;
@@ -214,7 +228,7 @@ header .cNew {
     height: 15vh;
 }
 
-.submit:hover {
+.submit:hover { /* Too be fixed */
     background: #bdc3c7;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
@@ -232,7 +246,7 @@ header .cNew {
     width: 35vw;
     height: 75vh;
     border-radius: 10px;
-    background: #fff;
+    background: var(--strong-white);
 }
 
 .hIn {
@@ -255,12 +269,13 @@ p {
 }
 
 .lCreate::placeholder {
-    color: #706e6e;
+    color: var(--light-dark-shadow);
 }
 
 .lCreate {
-    background: rgba(199, 194, 194, 0.568);
-    color: #080808d2;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: var(--super-light-shadow);
+    color: var(--strong-black);
     font-size: 1.6vw;
     border: none;
     border-radius: 3px;
@@ -271,13 +286,13 @@ p {
 
 .lsubmit {
     cursor: pointer;
-    background: #000000;
+    background: var(--strong-black);
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #434343, #000000);
+    background: -webkit-linear-gradient(to left, var(--less-black), var(--strong-black));
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #434343, #000000);
+    background: linear-gradient(to left, var(--less-black), var(--strong-black));
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: #eee;
+    color: var(--strong-white);
     width: 25vw;
     height: 10vh;
     margin: 10vh 5vw 10vh 5vw;
@@ -288,7 +303,7 @@ p {
 }
 
 .lsubmit:hover {
-    box-shadow: 1vh 1vh 15px #434343;
+    box-shadow: 1vh 1vh 15px var(--less-black);
     transform: scale(1.05);
 }
 
@@ -305,16 +320,16 @@ ul {
 }
 
 .maindiv {
-    background: #eee;
+    background: var(--strong-white);
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #fff, #eee);
+    background: -webkit-linear-gradient(to right, var(--strong-white), var(--less-white));
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #fff, #eee);
+    background: linear-gradient(to right, var(--strong-white), var(--less-white));
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 10px;
     width: 100%;
     height: 75vh;
-    box-shadow: 0 0.5vh 10px rgb(54, 51, 51);
+    box-shadow: 0 0.5vh 10px var(--medium-black);
     overflow-y: auto;
     position: relative;
 }
@@ -326,7 +341,7 @@ main h1 {
     width: 82%;
     height: 25%;
     margin: auto;
-    color: rgb(22, 21, 21);
+    color: var(--medium-black);
     text-transform: capitalize;
     padding: 1vh 2vh 0 2vh;
     transition: 0.5s ease;
@@ -336,7 +351,7 @@ main h1 {
     height: 55%;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 2vw;
-    color: rgb(54, 51, 51);
+    color: var(--less-black);
     padding: 3vh 3vh 5vh 3vh;
     margin: 0vh 3vh
 }
@@ -358,7 +373,7 @@ main h1 {
     transition: all 0.4s ease-in;
     margin: .5vh;
     text-decoration: none;
-    color: #000000;
+    color: var(--strong-black);
     font-size: 2vw;
 }
 
@@ -383,7 +398,7 @@ main h1 {
 .textra {
     position: relative;
     padding: 5px;
-    background: rgba(8, 8, 8, 0.678);
+    background: var(--strong-shadow);
     width: 20vw;
     display: none;
     border-radius: 20px;
@@ -394,8 +409,8 @@ main h1 {
 }
 
 .extra {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #eee;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--less-white);
     font-size: 1vw;
 }
 
@@ -405,20 +420,6 @@ main h1 {
 
 body::-webkit-scrollbar {
     display: none;
-}
-
-.maindiv::-webkit-scrollbar-track {
-    display: none;
-}
-
-.maindiv::-webkit-scrollbar {
-    width: 14px;
-    background: none;
-}
-
-.maindiv::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: rgba(112, 109, 109, 0.671);
 }
 
 #topBtn {
@@ -435,14 +436,14 @@ body::-webkit-scrollbar {
     z-index: 99;
     font-size: 7vh;
     border: none;
-    background: #eee;
+    background: var(--less-white);
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #fff, #eee);
+    background: -webkit-linear-gradient(to right, var(--strong-white), var(--less-white));
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #fff, #eee);
+    background: linear-gradient(to right, var(--strong-white), var(--less-white));
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: rgb(22, 21, 21);
-    box-shadow: 0 0 15px 10px rgba(112, 109, 109, 0.7);
+    color: var(--medium-black);
+    box-shadow: 0 0 15px 10px var(--light-dark-shadow);
     cursor: pointer;
     border-radius: 50%;
     position: fixed;

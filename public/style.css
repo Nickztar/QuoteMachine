@@ -53,7 +53,6 @@ header img {
     height: 7vw;
     align-self: center;
     justify-self: right;
-    filter: grayscale(100%);
 }
 
 header h1 {

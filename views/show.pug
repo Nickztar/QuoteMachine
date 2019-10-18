@@ -2,10 +2,10 @@ extends head.pug
 block header
     img(src="/favicon.png" alt="Feather logo")
     h1 "Quotes"
-    a(href="/quotes/") Return
-                    i.fas.fa-undo
-    form(action="/quotes/create")
-        input(type="submit" value="Create new" class="create")
+    a.return(href="/quotes/")  Return
+        i.fas.fa-undo
+    form.cNew(action="/quotes/create")
+        input#cNew(type="submit" value="Create new" class="create")
     a#login(href="/login") Login
     a#register(href="/register") Register
 block main
@@ -14,9 +14,13 @@ block main
              div.maindiv
                 h1=data.author
                 p.quote= data.quote
-                a(href="/quotes/edit/" + data._id) Update
-                    i.far.fa-edit
-                a(href="/quotes/delete/" + data._id) Delete
-                    i.far.fa-trash-alt
-                p.extra="ID: " + data._id
-                p.extra="Time: " + data.timestamp
+                div#changeIcons
+                    a(href="/quotes/edit/" + data._id)
+                        i.far.fa-edit
+                    a(href="/quotes/delete/" + data._id)
+                        i.far.fa-trash-alt
+                div.tooltip
+                    i.far.fa-question-circle
+                    div.textra
+                        span.extra="ID: " + data._id
+                        span.extra="Time: " + data.timestamp

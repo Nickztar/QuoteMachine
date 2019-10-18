@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://www.t4-hubb.herokuapp.com/sitemap2.xml
+Sitemap: http://www.t4-hubb.herokuapp.com/sitemap.xml

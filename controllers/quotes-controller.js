@@ -43,7 +43,7 @@ module.exports = {
     },
     show: async (req, res) => {
         try {
-            const author = req.params.author;
+            const author = req.query.author;
             const subStr = author.substr(0, 3);
             const arrD = await col.find({
                 author: {$regex: subStr, $options: 'i'}

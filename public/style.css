@@ -32,7 +32,7 @@ input {
 
 header {
     display: grid;
-    grid-template-columns: 10vw auto auto auto 10vw 12.5vw;
+    grid-template-columns: 10vw auto auto 18vw 10vw 12.5vw;
     grid-template-areas: 'logo h1 search new link1 link2';
     height: 15vh;
 }
@@ -90,13 +90,70 @@ header .cNew {
     grid-area: new;
     display: flex;
     align-items: center;
-    justify-items: right;
+    justify-content: right;
 }
-header .search{
-    width: 10vw;
+
+header .search {
+    position: relative;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+    background: #fff;
+    padding: 5px;
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 1.75vw;
+    border: 4px solid #fff;
 }
+
+header #search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 85%;
+    font-size: 2vw;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 80%;
+    border-radius: 20%;
+    outline: none;
+    color: rgb(22, 21, 21);
+    border: none;
+    padding: 0.7vw 1vw 0 1vw;
+}
+
+header .search .fas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5vw;
+    width: 2.975vw;
+    height: 2.975vw;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 4vh;
+    transition: all 1s;
+}
+
+header .search:hover {
+    width: 20vw;
+    cursor: pointer;
+}
+
+header .search:hover #search {
+    display: block;
+}
+
+header .search:hover .fas {
+    background: #07051a;
+    color: #fff;
+}
+
 .create {
-    margin: 0 0 0 auto;
+    justify-self: right;
     color: rgba(246, 250, 11, 0.863);
     background: none;
     cursor: pointer;
@@ -326,7 +383,7 @@ body::-webkit-scrollbar {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #fff, #eee);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color:rgb(22, 21, 21);
+    color: rgb(22, 21, 21);
     box-shadow: 0 0 15px 10px rgba(112, 109, 109, 0.7);
     cursor: pointer;
     border-radius: 50%;
@@ -334,16 +391,25 @@ body::-webkit-scrollbar {
     display: block;
 }
 
+.faSubmit {
+    background: none;
+    padding: 0px;
+    border: none;
+}
+
 @media screen and (max-width: 1000px) {
     ul {
         grid-template-columns: 1fr 1fr;
     }
-    .lCreate{
+
+    .lCreate {
         width: 50vw;
     }
-    .lsubmit{
+
+    .lsubmit {
         width: 50vw;
     }
+
     .loginPart {
         margin: 0 20vw 0 20vw;
         width: 60vw;

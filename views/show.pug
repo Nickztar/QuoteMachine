@@ -2,6 +2,8 @@ extends head.pug
 block header
     img(src="/favicon.png" alt="Feather logo")
     h1 "Quotes"
+    a(href="/quotes/") Return
+                    i.fas.fa-undo
     form(action="/quotes/create")
         input(type="submit" value="Create new" class="create")
     a#login(href="/login") Login
@@ -12,8 +14,6 @@ block main
              div.maindiv
                 h1=data.author
                 p.quote= data.quote
-                a(href="/quotes/") Return
-                    i.fas.fa-undo
                 a(href="/quotes/edit/" + data._id) Update
                     i.far.fa-edit
                 a(href="/quotes/delete/" + data._id) Delete

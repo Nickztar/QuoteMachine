@@ -49,8 +49,8 @@ header {
 }
 
 header img {
-    width: 8vw;
-    height: 6vw;
+    width: 7vw;
+    height: 7vw;
     align-self: center;
     justify-self: right;
     filter: grayscale(100%);

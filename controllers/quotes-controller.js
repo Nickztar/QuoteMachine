@@ -17,7 +17,7 @@ class Quote {
 (async () => {
     try {
         db = await require("../dbConfig")();
-        col = await db.collection("quotes");
+        col = await db.collection("quotesv2");
     } catch (error) {
         Console.log(error);
     }
@@ -98,7 +98,6 @@ module.exports = {
         } catch (error) {
             res.redirect('/quotes');
         }
-
     },
     update: async (req, res) => {
         try {

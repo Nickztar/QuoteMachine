@@ -181,6 +181,7 @@ header .cNew {
 }
 
 .create {
+    font-size: 2vw;
     justify-self: right;
     color: var(--primary);
     background: var(--surface);
@@ -200,7 +201,8 @@ header .cNew {
     text-decoration: underline;
 }
 
-.make { /* Too be fixed */
+.make {
+    /* Too be fixed */
     width: 80vw;
     height: 15vh;
     background: #A1FFCE;
@@ -215,7 +217,8 @@ header .cNew {
     color: var(--medium-black);
 }
 
-.submit { /* Too be fixed */
+.submit {
+    /* Too be fixed */
     cursor: pointer;
     margin-top: 1%;
     color: #FBFCFC;
@@ -233,7 +236,8 @@ header .cNew {
     height: 15vh;
 }
 
-.submit:hover { /* Too be fixed */
+.submit:hover {
+    /* Too be fixed */
     background: #bdc3c7;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
@@ -245,6 +249,7 @@ header .cNew {
 }
 
 .loginPart {
+    animation: appear 2s;
     font-family: 'Roboto Mono', monospace;
     margin: 0 27.5vw 0 27.5vw;
     display: grid;
@@ -322,12 +327,7 @@ ul {
 }
 
 .maindiv {
-    background: var(--strong-white);
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, var(--strong-white), var(--less-white));
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, var(--strong-white), var(--less-white));
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    animation: appear 2s;
     background: var(--surface);
     border-radius: 10px;
     width: 100%;
@@ -419,6 +419,7 @@ main h1 {
 }
 
 .tooltip:hover .textra {
+    animation: appear 1s;
     display: flex;
 }
 
@@ -454,6 +455,22 @@ body::-webkit-scrollbar {
     background: none;
     padding: 0px;
     border: none;
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @media screen and (max-width: 1000px) {

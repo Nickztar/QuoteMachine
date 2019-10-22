@@ -457,6 +457,10 @@ body::-webkit-scrollbar {
     border: none;
 }
 
+.failed{
+    animation: failed 1s;
+}
+
 @keyframes appear {
     0% {
         transform: scale(0.1);
@@ -471,6 +475,17 @@ body::-webkit-scrollbar {
     100% {
         transform: scale(1);
     }
+}
+
+@keyframes failed {
+    0% { transform: translate(1px, 1px); background-color: rgba(221, 31, 31, 0.288); }
+  10% { transform: translate(-1px, -2px); }
+  20% { transform: translate(-3px, 0px); }
+  40% { transform: translate(1px, -1px); background-color: rgba(221, 31, 31, 0.685);}
+  50% { transform: translate(-1px, 2px); }
+  60% { transform: translate(-3px, 1px); }
+  90% { transform: translate(1px, 2px); background-color: rgba(221, 31, 31, 0.356);}
+  100% { transform: translate(1px, -2px); }
 }
 
 @media screen and (max-width: 1000px) {

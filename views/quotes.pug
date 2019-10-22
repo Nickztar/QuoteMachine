@@ -6,7 +6,7 @@ block header
         input#search(type="search" name="author" placeholder="Search author" autofocus)
         button(type="submit" class="faSubmit")
             i.fas.fa-search
-    form.cNew(action="/maintenance.html")
+    form.cNew(action="/quotes/create")
         input#cNew(type="submit" value="Create new" class="create")
     a#login(href="/login") Login
     a#register(href="/register") Register
@@ -17,9 +17,9 @@ block main
                 h1=data.author
                 p.quote=data.quote
                 div#changeIcons
-                    a(href="#" + data._id)
+                    a(href="/quotes/edit/" + data._id)
                         i.far.fa-edit
-                    a(href="#" + data._id)
+                    a(href="/quotes/delete/" + data._id)
                         i.far.fa-trash-alt
                 div.tooltip
                     i.far.fa-question-circle

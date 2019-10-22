@@ -26,7 +26,8 @@ module.exports = {
             const user = {
                 email: req.body.email,
                 password: hashPass,
-                date: req.body.date
+                date: req.body.date,
+                admin: false
             };
             const exist = await col.findOne({email:user.email});
             if (!exist) {
@@ -53,12 +54,14 @@ module.exports = {
             });
             const cUser = {
                 email: user.email,
-                date: user.date
+                date: user.date,
+                admin: user.admin
             }
             const result = await bcrypt.compare(password, user.password);
             const token = jwt.sign(cUser, process.env.secret, {
                 expiresIn: 120
             });
+            console.log(jwt.decode(token));
             //req.user = cUser;
             req.token = token;
             if (result) {

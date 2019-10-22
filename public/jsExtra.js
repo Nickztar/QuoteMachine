@@ -1,6 +1,6 @@
 button = document.getElementById("topBtn");
 login = document.getElementsByClassName("loginPart");
-
+error = document.getElementById("wrong");
 window.onscroll = ()=>{
     scroll();
 };
@@ -21,11 +21,14 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
-let query = location.search;
-if (query){
-    login[0].classList.add("failed");
-}
-else{
-    login[0].classList.remove("failed");
+if(window.location.pathname == '/login' || window.location.pathname == '/register'){
+    let query = location.search;
+    if (query){
+        login[0].classList.add("failed");
+        error.style.display= "flex";
+    }
+    else{
+        login[0].classList.remove("failed");
+        error.style.display= "none";        
+    }
 }

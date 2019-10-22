@@ -2,9 +2,11 @@ extends head.pug
 block main
    div.loginPart
       h2.hIn Sign in to your account
+      div#wrong
+         h3.invalid Invalid Username or Password
       form(action="/login" method="POST")
          input.lCreate(type="email" name="email" placeholder="Enter your email" required autofocus)
          input.lCreate(type="password" name="password" placeholder="Enter your password")
          input.lsubmit(type="submit" value="Sign in")
          p Don't have an account?
-            a.loginLink(href="/register") Get started!
+            a.loginLink(href="/register") Sign up!

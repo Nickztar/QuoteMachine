@@ -34,10 +34,10 @@ module.exports = {
                 await col.insertOne(user);
                 res.redirect('/login');
             } else {
-                res.redirect('/register?useralreadyexists');
+                res.redirect('/register?failed'); //user exists
             }
         } catch (error) {
-            res.redirect('/register?errormakinguser');
+            res.redirect('/register?failed'); //db error
         }
     },
     login: (req, res) => {
@@ -61,6 +61,7 @@ module.exports = {
             const token = jwt.sign(cUser, process.env.secret, {
                 expiresIn: 120
             });
+            req.user = cUser;
             req.token = token;
             if (result) {
                 res.cookie("token", req.token, {
@@ -69,10 +70,10 @@ module.exports = {
                 });
                 res.redirect('/quotes');
             } else {
-                res.redirect("/login?mes=wrong username or password");
+                res.redirect("/login?failed"); //password fail
             }
         } catch (error) {
-            res.redirect("/login?mes=no user found")
+            res.redirect("/login?failed"); //email fail
         }
 
     }

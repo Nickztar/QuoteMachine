@@ -13,15 +13,6 @@
     --secondary-text: #D0D0D0b3;
     --disabled-text: #D0D0D080;
     --error: #cf6679cc;
-
-    --strong-white: #fff;
-    --less-white: #eee;
-    --strong-black: #000;
-    --medium-black: #161515;
-    --less-black: #363636;
-    --strong-shadow: #2e2c2ca2;
-    --light-dark-shadow: #565252a2;
-    --super-light-shadow: #b8b2b26b;
 }
 
 * {
@@ -258,6 +249,16 @@ header .cNew {
     border-radius: 10px;
     background: var(--surface);
 }
+#wrong{
+    background: var(--error);
+    color: var(--medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7vh;
+    border-radius: 20px;
+    margin: 0 4vw 1vh;
+}
 
 .hIn {
     font-size: 1.9vw;
@@ -302,7 +303,7 @@ p {
     color: var(--secondary-text);
     width: 25vw;
     height: 10vh;
-    margin: 10vh 5vw 10vh 5vw;
+    margin: 10vh 5vw 5vh 5vw;
     border: none;
     border-radius: 5px;
     font-size: 1.7rem;
@@ -455,6 +456,10 @@ body::-webkit-scrollbar {
     background: none;
     padding: 0px;
     border: none;
+}
+
+.hidden{
+    display: none;
 }
 
 .failed{

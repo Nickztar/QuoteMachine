@@ -7,7 +7,6 @@ block main
       form(action="/register" method="POST")
          input.lCreate(type="email" name="email" placeholder="Enter a valid email" required autofocus)
          input.lCreate(type="password" name="password" placeholder="Enter a password")
-         input(input type="hidden" name="date" value=date)
          input.lsubmit(type="submit" value="Register")
       p Already have an account?
          a.loginLink(href="/login") Login!

@@ -16,7 +16,6 @@ let db, col;
 module.exports = {
     create: (req, res) => {
         res.render('register', {
-            date: Date.now(),
             title: "Registration"
         });
     },
@@ -26,7 +25,7 @@ module.exports = {
             const user = {
                 email: req.body.email,
                 password: hashPass,
-                date: req.body.date,
+                date: Date.now(),
                 admin: false
             };
             const exist = await col.findOne({email:user.email});

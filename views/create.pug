@@ -2,8 +2,5 @@ extends head.pug
 block main
     form(action="/quotes/create" method="POST")
         input.make(type="text" name="author" placeholder="Author")
-        br
         input.make(type="text" name="quote" placeholder="Your quote...")
-        input(input type="hidden" name="timestamp" value=date)
-        br
         input.submit(type="submit" value="Save")

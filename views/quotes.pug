@@ -2,7 +2,7 @@ extends head.pug
 block header
     img(src="/favicon.png" alt="Feather logo")
     h1 "Quotes"
-    form.search(action="/quotes/show/" method="GET")
+    form.search(action="/quotes/show/" method="GET" autocomplete="off")
         input#search(type="search" name="author" placeholder="Search author" autofocus)
         button(type="submit" class="faSubmit")
             i.fas.fa-search

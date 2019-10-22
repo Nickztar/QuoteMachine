@@ -61,8 +61,6 @@ module.exports = {
             const token = jwt.sign(cUser, process.env.secret, {
                 expiresIn: 120
             });
-            console.log(jwt.decode(token));
-            //req.user = cUser;
             req.token = token;
             if (result) {
                 res.cookie("token", req.token, {

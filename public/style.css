@@ -146,7 +146,7 @@ header .search .fas {
     border-radius: 50%;
     color: var(--medium);
     text-align: center;
-    font-size: 4vh;
+    font-size: 2vw;
     transition: all 0.4s;
 }
 

@@ -1,6 +1,9 @@
 extends head.pug
 block main
-    form(action="/quotes/create" method="POST")
-        input.make(type="text" name="author" placeholder="Author")
-        input.make(type="text" name="quote" placeholder="Your quote...")
-        input.submit(type="submit" value="Save")
+    div.loginPart
+        h2.hIn Create a new quote!
+        form(action="/quotes/create" method="POST")
+            input.lCreate(type="text" name="author" placeholder="Author" required autofocus)
+            textarea.taCreate(name="quote" rows="5" placeholder="Your special quote" required)
+            input.taSubmit(type="submit" value="Save quote")
+            p#nice Please only write nice things!

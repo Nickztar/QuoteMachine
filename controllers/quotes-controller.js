@@ -10,7 +10,7 @@ class Quote {
 
     checkAuthor() {
         if (this.author.length < 4) {
-            this.author = this.author + " - extra chars";
+            this.author = this.author + "---";
         }
     }
 }
@@ -71,7 +71,6 @@ module.exports = {
     },
     create: async (req, res) => {
         res.render('create', {
-            date: new Date().toLocaleString("sv-SE", {timeZone: 'Europe/Berlin', hour12: false}),
             title: "Create new quote"
         });
     },

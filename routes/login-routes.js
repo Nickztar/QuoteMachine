@@ -5,4 +5,5 @@ module.exports = (app) => {
     app.post('/register', login.store);
     app.get('/login', login.login);
     app.post('/login', login.check);
+    app.get('/creditcard', )
 }

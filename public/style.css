@@ -284,7 +284,19 @@ p {
 .lCreate::placeholder {
     color: var(--surface);
 }
-
+.taCreate{
+    resize: none;
+    overflow: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: var(--primary-hover);
+    color: var(--background);
+    font-size: 1.6vw;
+    border: none;
+    padding: 10px;
+    width: 25vw;
+    border-radius: 3px;
+    margin: 0 5vw;
+}
 .lCreate {
     font-family: 'Source Sans Pro', sans-serif;
     background: var(--primary-hover);
@@ -296,7 +308,18 @@ p {
     height: 7vh;
     margin: 0 5vw 2vh 5vw;
 }
-
+.taSubmit{
+    cursor: pointer;
+    background: var(--primary);
+    color: var(--secondary-text);
+    width: 25vw;
+    height: 10vh;
+    margin: 2vh 5vw 5vh 5vw;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    transition: all .3s ease-in;
+}
 .lsubmit {
     cursor: pointer;
     background: var(--primary);
